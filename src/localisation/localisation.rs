@@ -193,6 +193,10 @@ impl Localisation {
         self.get("language_label")
     }
 
+    pub fn preview_panel_title(&self) -> &str {
+        self.get("preview_panel_title")
+    }
+
     pub fn no_file_label(&self) -> &str {
         self.get("no_file_label")
     }

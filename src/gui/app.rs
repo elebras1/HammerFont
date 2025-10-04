@@ -1,4 +1,4 @@
-use super::{font_settings::FontSettings, header::Header};
+use super::{font_settings::FontSettings, header::Header, preview_panel::PreviewPanel};
 use crate::localisation::Localisation;
 use eframe::egui;
 use egui::{FontData, FontDefinitions, FontFamily};
@@ -7,6 +7,7 @@ use std::sync::Arc;
 pub struct HammerFontApp {
     header: Header,
     font_settings: FontSettings,
+    preview_panel: PreviewPanel,
     localisation: Localisation,
 }
 
@@ -16,6 +17,7 @@ impl HammerFontApp {
         Self {
             header: Header::new(),
             font_settings: FontSettings::new(),
+            preview_panel: PreviewPanel::new(),
             localisation,
         }
     }
@@ -42,6 +44,10 @@ impl eframe::App for HammerFontApp {
             .show(context, |ui| {
                 self.font_settings.ui(ui, &self.localisation);
             });
+
+        egui::CentralPanel::default().show(context, |ui| {
+            self.preview_panel.ui(ui, &self.localisation);
+        });
     }
 }
 
