@@ -4,6 +4,7 @@ use eframe::egui;
 pub struct PreviewPanel {
     zoom: f32,
     show_grid: bool,
+    background_color: egui::Color32,
 }
 
 impl PreviewPanel {
@@ -11,6 +12,7 @@ impl PreviewPanel {
         Self {
             zoom: 1.0,
             show_grid: true,
+            background_color: egui::Color32::from_gray(40),
         }
     }
 
@@ -27,14 +29,17 @@ impl PreviewPanel {
         ui.horizontal(|ui| {
             ui.heading(loc.preview_panel_title());
             ui.separator();
-            self.zoom_controls(ui);
+            self.zoom_controls(ui, loc);
             ui.separator();
-            ui.checkbox(&mut self.show_grid, "Grid");
+            ui.checkbox(&mut self.show_grid, loc.grid_label());
+            ui.separator();
+            ui.color_edit_button_srgba(&mut self.background_color);
+            ui.label(loc.background_label());
         });
     }
 
-    fn zoom_controls(&mut self, ui: &mut egui::Ui) {
-        ui.label("Zoom:");
+    fn zoom_controls(&mut self, ui: &mut egui::Ui, loc: &Localisation) {
+        ui.label(loc.zoom_label());
         if ui.button("➖").clicked() {
             self.zoom = (self.zoom - 0.25).max(0.25);
         }
@@ -54,7 +59,7 @@ impl PreviewPanel {
                 );
 
                 let rect = response.rect;
-                painter.rect_filled(rect, 0.0, egui::Color32::from_gray(40));
+                painter.rect_filled(rect, 0.0, self.background_color);
 
                 if self.show_grid {
                     self.draw_grid(&painter, rect);

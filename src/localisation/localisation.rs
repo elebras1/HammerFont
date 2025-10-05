@@ -200,4 +200,16 @@ impl Localisation {
     pub fn no_file_label(&self) -> &str {
         self.get("no_file_label")
     }
+
+    pub fn zoom_label(&self) -> &str {
+        self.get("zoom_label")
+    }
+
+    pub fn grid_label(&self) -> &str {
+        self.get("grid_label")
+    }
+
+    pub fn background_label(&self) -> &str {
+        self.get("background_label")
+    }
 }
