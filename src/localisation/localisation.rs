@@ -212,4 +212,8 @@ impl Localisation {
     pub fn background_label(&self) -> &str {
         self.get("background_label")
     }
+
+    pub fn character_list_label(&self) -> &str {
+        self.get("character_list_label")
+    }
 }
