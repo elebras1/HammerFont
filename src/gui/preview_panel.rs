@@ -75,12 +75,13 @@ impl PreviewPanel {
             x += grid_spacing;
         }
 
-        let y = rect.top();
+        let mut y = rect.top();
         while y < rect.bottom() {
             painter.line_segment(
                 [egui::pos2(rect.left(), y), egui::pos2(rect.right(), y)],
                 egui::Stroke::new(1.0, egui::Color32::from_gray(60)),
             );
+            y += grid_spacing;
         }
     }
 }
