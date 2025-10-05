@@ -19,6 +19,9 @@ zoom_label;Zoom:;Zoom :;Zoom:;Zoom:;Zoom:;Zoom:;Zoom:;Zoom:;Nagyítás:;Zoom:;Zo
 grid_label;Grid;Grille;Raster;Siatka;Cuadrícula;Griglia;Rutnät;Mřížka;Rács;Raster;Grelha;Сетка;Ruudukko;网格
 background_label;Background;Arrière-plan;Hintergrund;Tło;Fondo;Sfondo;Bakgrund;Pozadí;Háttér;Achtergrond;Fundo;Фон;Tausta;背景
 character_list_label;Character List;Liste de caractères;Zeichenliste;Lista znaków;Lista de caracteres;Elenco dei caratteri;Teckenlista;Seznam znaků;Karakterlista;Tekenslijst;Lista de caracteres;Список символов;Merkki luettelo;字符列表
+column_number_id_label;Column (number or ID);Colonne (numéro ou ID);Spalte (Nummer oder ID);Kolumna (numer lub ID);Columna (número o ID);Colonna (numero o ID);Kolumn (nummer eller ID);Sloupec (číslo nebo ID);Oszlop (szám vagy azonosító);Kolom (nummer of ID);Coluna (número ou ID);Колонка (номер или ID);Sarake (numero tai tunniste);列（数字或ID）
+import_from_file_button;📄 File;📄 Fichier;📄 Datei;📄 Plik;📄 Archivo;📄 File;📄 Fil;📄 Soubor;📄 Fájl;📄 Bestand;📄 Arquivo;📄 Файл;📄 Tiedosto;📄 文件
+import_from_folder_button;📁 Folder;📁 Dossier;📁 Ordner;📁 Folder;📁 Carpeta;📁 Cartella;📁 Mapp;📁 Složka;📁 Mappa;📁 Map;📁 Pasta;📁 Папка;📁 Kansio;📁 文件夹
 lang_english;English;Anglais;Englisch;Angielski;Inglés;Inglese;Engelska;Angličtina;Angol;Engels;Inglês;Английский;Englanti;英语
 lang_french;French;Français;Französisch;Francuski;Francés;Francese;Franska;Francouzština;Francia;Frans;Francês;Французский;Ranska;法语
 lang_german;German;Allemand;Deutsch;Niemiecki;Alemán;Tedesco;Tyska;Němčina;Német;Duits;Alemão;Немецкий;Saksa;德语

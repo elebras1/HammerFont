@@ -216,4 +216,16 @@ impl Localisation {
     pub fn character_list_label(&self) -> &str {
         self.get("character_list_label")
     }
+
+    pub fn column_number_id_label(&self) -> &str {
+        self.get("column_number_id_label")
+    }
+
+    pub fn import_from_file_button(&self) -> &str {
+        self.get("import_from_file_button")
+    }
+
+    pub fn import_from_folder_button(&self) -> &str {
+        self.get("import_from_folder_button")
+    }
 }
