@@ -1,3 +1,4 @@
+use crate::character::extract;
 use crate::localisation::Localisation;
 use eframe::egui;
 use std::collections::HashSet;
@@ -87,7 +88,7 @@ impl CharacterList {
         if matches!(self.active_dialog, Some(DialogType::File)) {
             if self.file_dialog.show(ui.ctx()).selected() {
                 if let Some(path) = self.file_dialog.path() {
-                    // TODO
+                    self.text = extract::extract_characters(&path, &self.language_id);
                 }
                 self.active_dialog = None;
             }
@@ -96,7 +97,7 @@ impl CharacterList {
         if matches!(self.active_dialog, Some(DialogType::Folder)) {
             if self.folder_dialog.show(ui.ctx()).selected() {
                 if let Some(path) = self.folder_dialog.path() {
-                    // TODO
+                    self.text = extract::extract_characters_from_folder(&path, &self.language_id);
                 }
                 self.active_dialog = None;
             }

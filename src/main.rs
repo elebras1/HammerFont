@@ -1,3 +1,4 @@
+mod character;
 mod gui;
 mod localisation;
 use localisation::{Language, Localisation};
